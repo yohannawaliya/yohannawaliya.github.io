@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>climatophosis</title>
+  
+  
+  
+  <style>
+body{ background:#000;
+}
+
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-60%, -60%);
+          transform: translate(-60%, -60%);
+  width: 300px;
+  height: 300px;
+}
+.circle1 {
+Justify-content:center
+display:flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border: 0px solid #000;
+  border-radius: 50%;
+  -webkit-animation: 59s move-left infinite;
+          animation: 59s move-left infinite;
+}
+
+.circle2 {
+Justify-content:center;
+display:flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border: 0px solid #000;
+  border-radius: 50%;
+  -webkit-animation: 58s move-right infinite;
+          animation: 58s move-right infinite;
+}
+.circle3 {
+Justify-content: right;
+display:flex;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border: 0px solid #000;
+  border-radius: 50%;
+  -webkit-animation: 50s move-left infinite;
+          animation: 50s move-left infinite;
+}
+
+.circle4 {
+Justify-content:left;
+display:flex;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border: 0px solid #000;
+  border-radius: 50%;
+  -webkit-animation: 50s move-left infinite;
+          animation: 50s move-left infinite;
+}
+
+@-webkit-keyframes move-left {
+  0% {
+    width: 90%;
+    height: 90%;
+    top: 20%;
+    border: 0px solid #000;
+  }
+  10% {
+    width: 98%;
+    height: 98%;
+  }
+  15% {
+    width: 85%;
+    height: 85%;
+    top: 52%;
+    left: 50%;
+    border: 0px solid #000;
+  }
+  22% {
+    border: 0px solid #000;
+  }
+  50% {
+    left: 80%;
+    top: 50%;
+  }
+  95% {
+    border: 0px solid #000;
+    top: 70%;
+  }
+  100% {
+    width: 90%;
+    height: 90%;
+    left: 50%;
+    border: 0px solid #000;
+  }
+}
+
+@keyframes move-left {
+  0% {
+    width: 90%;
+    height: 90%;
+    top: 20%;
+    border: 0px solid #000;
+  }
+  10% {
+    width: 98%;
+    height: 98%;
+  }
+  15% {
+    width: 85%;
+    height: 85%;
+    top: 52%;
+    left: 50%;
+    border: 0px solid #000;
+  }
+  22% {
+    border: 0px solid #000;
+  }
+  50% {
+    left: 80%;
+    top: 50%;
+  }
+  95% {
+    border: 0px solid #000;
+    top: 60%;
+  }
+  100% {
+    width: 90%;
+    height: 90%;
+    left: 50%;
+    border: 0px solid #000;
+  }
+}
+@-webkit-keyframes move-right {
+  0% {
+    width: 90%;
+    height: 90%;
+    top: 20%;
+    border: 0px solid #eee;
+  }
+  10% {
+    width: 98%;
+    height: 98%;
+  }
+  15% {
+    width: 85%;
+    height: 85%;
+    top: 52%;
+    left: 50%;
+    border: 0px solid #000;
+  }
+  22% {right:50%;
+    border: 0px solid #000;
+  }
+  50% {
+    left: 20%;
+    top: 50%;
+  }
+  95% {
+    border: 0px solid#000;
+    top: 60%;
+  }
+  100% {
+    width: 90%;
+    height: 90%;
+    left: 50%;
+    border: 0px solid #000;
+  }
+}
+@keyframes move-right {
+  0% {
+    width: 90%;
+    height: 90%;
+    top: 20%;
+    border: 0px solid #000;
+  }
+  10% {
+    width: 100%;
+    height: 100%;
+  }
+  15% {
+    width: 85%;
+    height: 85%;
+    top: 52%;
+    left: 50%;
+    
+  }
+  22% {right:50%;
+    
+  }
+  50% {
+    left: 20%;
+    top: 50%;
+  }
+  95% {
+    
+    top: 70%;
+  }
+  100% {
+    width: 90%;  
+    height: 90%;
+    left: 50%;
+    border: 0px solid #000;
+  }
+}
+span1{
+color: lightSkyBlue;
+  font-size: .98rem;
+    position: absolute;
+  z-index: -1;
+  top: 2px;
+  left: -2px;
+  transition: left 6s;  
+  display: flex;
+}
+span2{ color: white;
+  font-size: .98em;
+  position: relative;
+  z-index: -1;
+  top: 2px;
+  left: -2px;
+  color: white;
+  transition: left 6s;
+  display: flex;
+position: relative;
+}
+span3{
+color: cyan;
+  font-size: .95em;
+    position: absolute;
+  z-index: -3;
+  top: 4px;
+  left: -2px;
+  transition: left 8s;  
+  display: flex;
+}
+span4{ 
+  font-size: .95em;
+  z-index: -3;
+  top: 4px;
+  left: -2px;
+  color: white;
+  transition: left 8s;
+  display: flex;
+position: relative;
+}
+h4{ color:red; 
+ text-align: right;}
+h3{color:red;
+text-align:center;
+}
+
+</style>
+
+  
+</head>
+
+<body>
+ 
+  <h3>Climatophosis</h3>
+<h4>Yohanna Joseph Waliya<br>Nigeria, 2019</h4>
+<div class="container">
+  <div class="circle1"><span1  style="color:springGreen">The Earth shrugs,</span1>
+    <div class="circle1"><span1 style="color:springGreen" >says,</span1>
+      <div class="circle1"><span1 style="color:springGreen">Humanity is a problem to itself </span1>
+      <div class="circle1"><span1 style= "color:springGreen"> and other living things:   </span1>
+          <div class="circle1"><span1 style=" color:springGreen"> they have learned to take but not to give to their environment.  </span1>
+           <div class= "circle1">
+           <div class=" circle1">
+           <div class="circle1"><span1> The sea overflows</span1>
+              <div class="circle1"><span1>says,</span1>
+                <div class="circle1"><span1>People fill me with plastic, </span1>
+                  <div class="circle1"><span1>change my temperature and currents, and kill my living things.</span1>
+                    <div class="circle1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="circle2"> <span2>The glaciers melt, </span2>
+    <div class="circle2">  <span2>say </span2>
+      <div class="circle2"> <span2>  I am thousands of years old  </span2>
+        <div class="circle2"> <span2> but now am disappearing  </span2>
+          <div class="circle2"> <span2>  and will raise the ocean levels to flood the cities. </span2>
+           <div class="circle2 ">
+           <div class="circle2 ">
+           <div class="circle"> <span2 style="color:gold">The sun scorches,  </span2>
+              <div class="circle2"> <span2  style="color: gold"> says </span2>
+                <div class="circle2">  <span2 style= "color:gold"> People are to blame because they cut down the trees </span2>
+                  <div class="circle2">  <span2 style="color:gold"> and burn so much carbon they warm the Earth itself.  </span2>
+                       <div class="circle2"></div>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	<diilv class="circle3"><span3  style="color:lightgreen">La Terre hausse les paules,</span3>
+    <div class="circle3"><span3 style="color:lightgreen" >dit-elle,</span3>
+      <div class="circle3"><span3 style="color: lightgreen"> l’humanité est un problème pour elle-même </span3>
+      <div class="circle3"><span3 style= "color: lightgreen">et pour les autres êtres vivants:</span3>
+          <div class="circle3"><span3 style=" color: lightgreen"> ils ont appris à s' en  bénificier mais pas donner à leur environnement. </span3>
+           <div class= "circle3">
+           <div class=" circle3">
+           <div class="circle3"><span3> La mer déborde, </span3>
+              <div class="circle3"><span3>dit-elle,</span3>
+                <div class="circle3"><span3>Les gens me remplissent de plastique, </span3>
+                  <div class="circle3"><span3>modifiant ma température et mes courants, et tuent les êtres vivants.</span3>
+               <div class="circle3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="circle4"> <span4>Le glacier fonde,</span4>
+    <div class="circle4">  <span4>dit-il </span4>
+      <div class="circle4"> <span4>  J'ai des milliers d'années,  </span4>
+        <div class="circle4"> <span4> mais maintenant je disparais  </span4>
+          <div class="circle4"> <span4>et je vais élever le courant de l'océan pour inonder les villes. </span4>
+           <div class="circle4 ">
+           <div class="circle4 ">
+           <div class="circle"> <span4 style="color:violet">Le soleil brûle, </span4>
+              <div class="circle4"> <span4  style="color:violet"> dit-il,</span4>
+                <div class="circle4">  <span4 style= "color:violet"> Les gens sont à blâmer parce qu'ils coupent les arbres </span4>
+                  <div class="circle4">  <span4 style="color:violet">et brûlent tellement de charbon qu'ils réchauffent la Terre-même.<span4>
+                    <div class="circle4"></div>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+</body>
+
+</html>

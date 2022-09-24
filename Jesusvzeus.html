@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 
+Jesus is above Cresus and Zeus by Yohanna Joseph Waliya.
+Uses code by Nils Schoenwald: https://codepen.io/schoenwaldnils/ 
+and Ryan Marshall: https://codepen.io/savnac/pen/xqrxKO
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Jesus is above Cresus and Zeus by Yohanna Joseph Waliya</title>
+  <style>
+      
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        text-align: center;
+        perspective: 100vh;
+        _perspective-origin: bottom right;
+        tranform-origin: 100vh;
+        font-size: 18px;
+        background-color:white;
+    }
+
+    #credits {
+      position: fixed;
+      right:10px;
+      top:10px;
+    }
+
+    .Text {
+      transform-style: preserve-3d;
+    }
+
+    .SpinningText {
+      animation: rotate 20s linear infinite;
+      transform-style: preserve-3d;
+      margin-bottom: 2px;
+    }
+
+    .SpinningText::before, .InnerText::before, .InnerText::after, .OuterText::before, .OuterText::after, .SpinningText::after {
+      content: 'Jesus is above Croesus.' 
+      'Jesus reigns over Zeus.' 
+      'Jesus saves us';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform-style: preserve-3d;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), 1px -1px 1px rgba(0, 0, 0, 0.1), -1px 1px 1px rgba(0, 0, 0, 0.7), -1px -1px 1px rgba(0, 0, 0, 0.1), 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+      color: lightgrey;
+    }
+
+    .SpinningText::before {
+      position: relative;
+      transform: translateZ(200px);
+      _color:gold;
+    }
+
+    .InnerText::before {
+      transform: translateZ(201px);
+    }
+
+    .OuterText::before {
+      transform: translateZ(203px);
+    }
+
+    .OuterText::after {
+      transform: translateZ(105px);
+    }
+
+    .InnerText::after {
+      transform: translateZ(107px);
+      color:#00ff80;
+    }
+
+    .SpinningText::after {
+      transform: translateZ(2px);
+      color: gold;
+    }
+
+    .SpinningText:nth-child(2) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(3) {
+      animation-duration: 16s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(4) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(5) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(6) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(7) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(8) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(9) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(10) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(11) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(12) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(13) {
+      animation-duration: 15s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(14) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(15) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(16) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(17) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .SpinningText:nth-child(18) {
+      animation-duration: 20s;
+      _transform-style: preserve-3d;
+      position: relative;
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+    .spin {
+      display: block;
+      margin: 10px 0;
+      -webkit-animation: rotate 20s linear infinite;
+              animation: rotate 16s linear infinite;
+      -webkit-transform: rotateX(20deg) rotateZ(10deg);
+              transform: rotateX(20deg) rotateZ(10deg);
+    }
+    .spin:nth-of-type(2) {
+      -webkit-animation-duration: 16s;
+              animation-duration: 16s;
+    }
+    .spin:nth-of-type(3) {
+      -webkit-animation-duration: 16s;
+              animation-duration: 16s;
+    }
+    .spin:nth-of-type(4) {
+      -webkit-animation-duration: 16s;
+              animation-duration: 16s;
+    }
+    .spin:nth-of-type(5) {
+      -webkit-animation-duration: 14s;
+              animation-duration: 14s;
+    }
+    .spin:nth-of-type(6) {
+      -webkit-animation-duration: 14s;
+              animation-duration: 14s;
+    }
+    .spin:nth-of-type(7) {
+      -webkit-animation-duration: 12s;
+              animation-duration: 12s;
+    }
+    .spin:nth-of-type(8) {
+      -webkit-animation-duration: 12s;
+              animation-duration: 12s;
+    }
+    .spin:nth-of-type(9) {
+      -webkit-animation-duration: 10s;
+              animation-duration: 10s;
+    }
+    .spin:nth-of-type(10) {
+      -webkit-animation-duration: 10s;
+              animation-duration: 10s;
+    }
+    .spin:nth-of-type(11) {
+      -webkit-animation-duration: 8s;
+              animation-duration: 8s;
+    }
+    .spin:nth-of-type(12) {
+      -webkit-animation-duration: 8s;
+              animation-duration: 8s;
+    }
+    .spin:nth-of-type(13) {
+      -webkit-animation-duration: 8s;
+              animation-duration: 8s;
+    }
+    .spin:nth-of-type(14) {
+      -webkit-animation-duration: 8s;
+              animation-duration: 8s;
+    }
+    .spin:nth-of-type(15) {
+      -webkit-animation-duration: 7s;
+              animation-duration: 7s;
+    }
+    .spin:nth-of-type(16) {
+      -webkit-animation-duration: 7s;
+              animation-duration: 7s;
+    }
+    .spin:nth-of-type(17) {
+      -webkit-animation-duration: 7s;
+              animation-duration: 7s;
+    }
+
+    @-webkit-keyframes rotate {
+      from {
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+      }
+      to {
+        -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+      }
+      to {
+        -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div id='credits'>Yohanna Joseph Waliya<br>Nigeria, 2019</div>
+  <div class='Text'>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'> </div>
+    <div class='OuterText'></div>
+  </div>
+  <div class='SpinningText'>
+    <div class='InnerText'></div>
+    <div class='OuterText'></div>
+  </div>
+</div>
+   <div class="container">
+  <div class="spin"><Strong>JÉSUS  EST AU-DESSUS DE ZEUS at CRÉSUS</strong></div>
+  <div class="spin">Jésus  est au-dessus de Crésus.</div>
+  <div class="spin">Jésus règne  sur Zeus.</div>
+  <div class="spin">Jésus  nous accorde le salus.</div>
+ 
+  </div>
+  
+</body>
+
+</html>

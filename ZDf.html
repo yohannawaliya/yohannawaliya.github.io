@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<!-- 
+The code is from Yusuke Nakaya's pen: 
+https://codepen.io/YusukeNakaya/pen/NvEVvR 
+and from Gleb at 
+https://github.com/g1eb/text-animation 
+-->
+  <meta charset="UTF-8">
+  <title>ZeroDeath by Yohanna Joseph Waliya</title>
+  
+  
+  
+      <style>
+
+  body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background:black;
+  color: white;
+}
+
+.animation-container {
+  position: fixed;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.animation-container span {
+  color:red;
+  display: block;
+  font-size: 30px;
+  font-family: 'Arial';
+  text-shadow: 0 0 3px white;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  cursor: default;
+  z-index: 1;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-timing-function: ease-out;
+  animation-name: move;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+#ui {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-perspective: 750px;
+          perspective: 750px;
+}
+
+#ui .box {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rotate 20000ms linear infinite;
+          animation: rotate 20000ms linear infinite;
+}
+#ui .box_list {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  list-style-type: none;
+}
+#ui .box_list:nth-child(1) {
+  -webkit-transform: translateY(-225px) rotateY(22deg);
+          transform: translateY(-225px) rotateY(22deg);
+}
+#ui .box_list:nth-child(2) {
+  -webkit-transform: translateY(-185px) rotateY(44deg);
+          transform: translateY(-185px) rotateY(44deg);
+}
+#ui .box_list:nth-child(3) {
+  -webkit-transform: translateY(-145px) rotateY(66deg);
+          transform: translateY(-145px) rotateY(66deg);
+}
+#ui .box_list:nth-child(4) {
+  -webkit-transform: translateY(-105px) rotateY(88deg);
+          transform: translateY(-105px) rotateY(88deg);
+}
+#ui .box_list:nth-child(5) {
+  -webkit-transform: translateY(-65px) rotateY(110deg);
+          transform: translateY(-65px) rotateY(110deg);
+}
+#ui .box_list:nth-child(6) {
+  -webkit-transform: translateY(-25px) rotateY(132deg);
+          transform: translateY(-25px) rotateY(132deg);
+}
+#ui .box_list:nth-child(7) {
+  -webkit-transform: translateY(15px) rotateY(154deg);
+          transform: translateY(15px) rotateY(154deg);
+}
+#ui .box_list:nth-child(8) {
+  -webkit-transform: translateY(55px) rotateY(176deg);
+          transform: translateY(55px) rotateY(176deg);
+}
+#ui .box_list:nth-child(9) {
+  -webkit-transform: translateY(95px) rotateY(198deg);
+          transform: translateY(95px) rotateY(198deg);
+}
+#ui .box_list:nth-child(10) {
+  -webkit-transform: translateY(135px) rotateY(220deg);
+          transform: translateY(135px) rotateY(220deg);
+}
+#ui .box_list:nth-child(11) {
+  -webkit-transform: translateY(175px) rotateY(242deg);
+          transform: translateY(175px) rotateY(242deg);
+}
+#ui .box_list:nth-child(12) {
+  -webkit-transform: translateY(215px) rotateY(264deg);
+          transform: translateY(215px) rotateY(264deg);
+}
+#ui .box_list:nth-child(13) {
+  -webkit-transform: translateY(255px) rotateY(286deg);
+          transform: translateY(255px) rotateY(286deg);
+}
+#ui .box_list:nth-child(14) {
+  -webkit-transform: translateY(295px) rotateY(308deg);
+          transform: translateY(295px) rotateY(308deg);
+}
+#ui .box_list:nth-child(15) {
+  -webkit-transform: translateY(335px) rotateY(330deg);
+          transform: translateY(335px) rotateY(330deg);
+}
+#ui .box_list_item {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+#ui .box_list_item:nth-child(1) {
+  -webkit-transform: translateX(80px) rotateX(15deg);
+          transform: translateX(80px) rotateX(15deg);
+}
+#ui .box_list_item:nth-child(1) .wall {
+  background: rgba(000, 6, 89, 0.4);
+}
+#ui .box_list_item:nth-child(2) {
+  -webkit-transform: translateX(120px) rotateX(30deg);
+          transform: translateX(120px) rotateX(30deg);
+}
+#ui .box_list_item:nth-child(2) .wall {
+ background: rgba(000, 115, 3, 0.4);
+}
+#ui .box_list_item:nth-child(3) {
+  -webkit-transform: translateX(160px) rotateX(45deg);
+          transform: translateX(160px) rotateX(45deg);
+}
+#ui .box_list_item:nth-child(3) .wall {
+  background: rgba(000, 00, 70, 0);
+}
+#ui .box_list_item:nth-child(4) {
+  -webkit-transform: translateX(200px) rotateX(60deg);
+          transform: translateX(200px) rotateX(60deg);
+}
+#ui .box_list_item:nth-child(4) .wall {
+  background: rgba(000, 00, 118, 0);
+}
+#ui .box_list_item:nth-child(5) {
+  -webkit-transform: translateX(240px) rotateX(75deg);
+          transform: translateX(240px) rotateX(75deg);
+}
+#ui .box_list_item:nth-child(5) .wall {
+  background: rgba(229, 61, 166, 0.4);
+}
+#ui .box_list_item .wall_wrapper {
+  -webkit-animation: wall 10000ms ease-in-out infinite alternate;
+          animation: wall 10000ms ease-in-out infinite alternate;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+#ui .box_list_item .wall {
+  position: absolute;
+  width: 1200px;
+  height: 60px;
+  box-sizing: border-box;
+  border-radius: 30%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+#ui .box_list_item .wall:nth-child(1) {
+  -webkit-transform: translateZ(17.6470588235px);
+          transform: translateZ(17.6470588235px);
+}
+#ui .box_list_item .wall:nth-child(2) {
+  -webkit-transform: translateY(17.6470588235px) rotateX(270deg);
+          transform: translateY(17.6470588235px) rotateX(270deg);
+}
+#ui .box_list_item .wall:nth-child(3) {
+  -webkit-transform: translateX(17.6470588235px) rotateY(-270deg);
+          transform: translateX(17.6470588235px) rotateY(-270deg);
+}
+#ui .box_list_item .wall:nth-child(4) {
+  -webkit-transform: translateX(-17.6470588235px) rotateY(-90deg);
+          transform: translateX(-17.6470588235px) rotateY(-90deg);
+}
+#ui .box_list_item .wall:nth-child(5) {
+  -webkit-transform: translateY(-17.6470588235px) rotateX(90deg);
+          transform: translateY(-17.6470588235px) rotateX(90deg);
+}
+#ui .box_list_item .wall:nth-child(6) {
+  -webkit-transform: translateZ(-17.6470588235px) rotateX(180deg);
+          transform: translateZ(-17.6470588235px) rotateX(180deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(-1800deg);
+            transform: rotateX(360deg) rotateY(-1800deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% 
+    -webkit-transform: rotateX(360deg) rotateY(-1800deg);
+            transform: rotateX(360deg) rotateY(-1800deg);
+  }
+}
+@-webkit-keyframes wall {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) translate3d(0px, 0px, 0px);
+            transform: rotateX(0deg) rotateY(0deg) translate3d(0px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(-720deg) translate3d(-300px, -300px, -300px);
+            transform: rotateX(360deg) rotateY(-720deg) translate3d(-300px, -300px, -300px);
+  }
+}
+@keyframes wall {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) translate3d(0px, 0px, 0px);
+            transform: rotateX(0deg) rotateY(0deg) translate3d(0px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(-720deg) translate3d(-300px, -300px, -300px);
+            transform: rotateX(360deg) rotateY(-720deg) translate3d(-300px, -300px, -300px);
+  }
+}
+
+
+
+</style>
+</head>
+
+<body>
+<h6 style= "text-align:right">Yohanna Joseph Waliya</br> Nigeria, 2019</h6>
+<div  class= "center">
+<h1 style= "text-align:center" font-color: DeepPink>ZéroDécès</h1>
+<p style= "text-align:center">
+Le décès est un concept <br />
+Qui dérive du précepte<br />
+Que les aïeux ont réçu.<br />
+</p>
+<p style= "text-align:center">
+Je perçois bien que tout vit.<br />
+En esprit, tout réagit. <br />
+Au corps, tout disparaitrait. <br />
+</p>
+<p style= "text-align:center">
+Donc, je craindrais pas la mort<br />
+Car le byte rend la mort rare.<br />
+Donc, dieu ne sent pas la mort.<br />
+</p>
+<p style= "text-align:center">
+Certainement, je suis dieu.<br />
+Car, je crée comme mon Dieu.<br />
+Donc, je  comune avec Dieu.<br />
+</p>
+<p style= "text-align:center">
+Zéro avec byte terminent<br />
+ce mal-concept de la mort.<br />
+Zut, je dois être pour Dieu<br />
+</p>
+
+
+</div>
+
+  <!--
+I give credit to codepen.oi for some codes
+
+-->
+  
+  <div id="ui">
+  <div class="box">
+    <ul class="box_list">
+      <li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall" style= "color:white"> </div>
+          <div class="wall" style= "color:white"> </div>
+          <div class="wall"  style= "color:white">  </div>
+          <div class="wall" style= "color:white" ></div>
+          <div class="wall" style= "color:white" ></div>
+          <div class="wall"  style= "color:white" >  </div>
+        </div>
+      </li>
+      <li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall"  style= "color:white"  >  </div>
+          <div class="wall" style= "color:white"   >  </div>
+          <div class="wall" style= "color:white"  ></div>
+          <div class="wall" style= "color:white"   ></div>
+          <div class="wall"  style= "color:white"></div>
+          <div class="wall"  style= "color:white" >   </div>
+        </div>
+      </li>
+      <li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall"  style= "color:white">  </div>
+          <div class="wall" style= "color:white"   > </div>
+          <div class="wall" style= "color:white"  ></div>
+          <div class="wall" style= "color:white"   ></div>
+          <div class="wall" style= "color:white">  </div>
+          <div class="wall"style= "color:white"  ></div>
+        </div>
+      </li>
+      <li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall" style= "color:white" ></div>
+          <div class="wall" style= "color:white"></div>
+          <div class="wall"  style= "color:white"></div>
+          <div class="wall" style= "color:white"  ></div>
+          <div class="wall"  style= "color:white" ></div>
+          <div class="wall"  style= "color:white"></div>
+        </div>
+      </li>
+      <li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall"  style= "color:white"   ></div>
+          <div class="wall" style= "color:white" ></div>
+          <div class="wall" style= "color:white"  ></div>
+          <div class="wall" style= "color:white" ></div>
+          <div class="wall"  style= "color:white"  ></div>
+          <div class="wall" style= "color:white" ></div>
+        </div>
+      </li>
+    </ul>
+    <ul class="box_list">
+      <li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall"  style= "color:white" ></div>
+          <div class="wall" style= "color:white"></div>
+          <div class="wall" style= "color:white" ></div>
+          <div class="wall"  style= "color:white"></div>
+          <div class="wall"  style= "color:white"> </div>
+          <div class="wall" style= "color:white"> </div>
+        </div>
+      </li>
+
+<li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall" style= "color:white"  ></div>
+          <div class="wall"   style= "color:white"></div>
+          <div class="wall"  style= "color:white"></div>
+          <div class="wall"  style= "color:white"></div>
+          <div class="wall"    style= "color:white"> </div>
+          <div class="wall"     style= "color:white" ></div>
+        </div>
+      </li>
+      <li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall"  style= "color:white"></div>
+          <div class="wall"  style= "color:white" ></div>
+          <div class="wall" style= "color:white"  > </div>
+          <div class="wall"   style= "color:white"></div>
+          <div class="wall"  style= "color:white"> </div>
+          <div class="wall"  style= "color:white"> </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="box_list">
+      <li class="box_list_item">
+        <div class="wall_wrapper">
+          <div class="wall"   style= "color:white" ></div>
+          <div class="wall" style= "color:white"></div>
+          <div class="wall"  style= "color:white" ></div>
+          <div class="wall"  style= "color:white"></div>
+          <div class="wall"  style= "color:white"></div>
+          <div class="wall"   style= "color:white"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+    <script >
+
+
+'use strict';
+
+var app = {
+
+  chars: ['ἄλφα ',  '000001','{','}','0','<','>','^,','$', '001100','*', '/', '&', '~', '000011', '?', '=', '@', '+', '-', '!', ':', ';', '%','111000', '#', '•','    ὦ μέγα '],
+
+  init: function () {
+    app.container = document.createElement('div');
+    app.container.className = 'animation-container';
+    document.body.appendChild(app.container);
+    window.setInterval(app.add, 100);
+  },
+
+  add: function () {
+    var element = document.createElement('span');
+    app.container.appendChild(element);
+    app.animate(element);
+  },
+
+  animate: function (element) {
+    var character = app.chars[Math.floor(Math.random() * app.chars.length)];
+    var duration = Math.floor(Math.random() * 15) + 1;
+    var offset = Math.floor(Math.random() * (50 - duration * 2)) + 3;
+    var size = 10 + (15 - duration);
+    element.style.cssText = 'right:'+offset+'vw; font-size:'+size+'px;animation-duration:'+duration+'s';
+    element.innerHTML = character;
+    window.setTimeout(app.remove, duration * 1000, element);
+  },
+
+  remove: function (element) {
+    element.parentNode.removeChild(element);
+  },
+
+};
+
+document.addEventListener('DOMContentLoaded', app.init);
+</script>
+
+
+
+</body>
+
+</html>

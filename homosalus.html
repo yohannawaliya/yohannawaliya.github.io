@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 
+Homosalus, by Yohanna Joseph Waliya.
+The code uses Keuni's pen:
+https://codepen.io/keuni/pen/LmVyYy 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Homosalus by Yohanna Joseph Waliya</title>
+  
+  
+  
+      <style>
+  ul {list-style: none;}
+        ul, li {margin: 0; padding: 0;}
+        a {text-decoration: none;}
+        body {background: radial-gradient(circle closest-side at 60% 40%, white, black);font: 0.8rem/120% Georgia, Times, serif;
+       font-size:2.8em;
+}
+    
+        #credits {
+            position: fixed;
+            text-align: center;
+            font-size: 14px;
+            color:white;
+            right:10px;
+            top:10px;
+            line-height:16px;
+        }
+
+        .cir_menu a {
+            color: rgba(160, 160, 160, 0.849);
+            display: block;
+        }
+    
+        .cir_menu a:hover {
+            color: gold;
+            font-weight: bold;
+        }
+    
+        .wrapper {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .contain {
+            position: relative;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, 50%);
+            height: 350px;
+            width: 500px;
+        }
+    
+        .cir_menu li {
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 12rem;
+            transform-origin: 100% 50%;
+            padding-left: 120px;
+        }
+.one{Georgia, Times, serif;
+       font-size: .9em;
+}
+.two{Georgia, Times, serif;
+       font-size:0.6em;
+}
+  </style>
+</head>
+
+<body>
+<div id="credits">Yohanna Joseph Waliya<br>Nigeria, 2019</div>
+<div class= "one">
+<h6 align= "center" style= "color:white">
+Homosalus
+</h6></div><div class=" two">
+
+</div>
+  <div class="wrapper">
+        <div class="contain">
+            <ul class="cir_menu">
+                <li><a href="#">Give your time to people .</a></li>
+                <li><a href="#">Give your talent to people.</a></li>
+                <li><a href="#">Give your treasure to people.</a></li>
+                <li><a href="#">Shield your taste from people.</a></li>
+                <li><a href="#">Shield your tongue from people.</a></li>
+                <li><a href="#">Shield your temper from people.</a></li>
+                <li><a href="#">Commit yourself to trust in people.</a></li>
+               <li><a href="#">Commit yourself to truth in people.</a></li>
+               <li><a href="#">Commit yourself to teaching people.</a></li>
+                <li><a href="#">Then, your life must be successful.</a></li>
+                <li><a href="#">Then, your life journey would be smooth.</a></li>
+                <li><a href="#">Then, your life would be without sorrow.</a></li>
+                <li><a href="#">Octroie ton temps au peuple.</a></li>
+                <li><a href="#">Octroie  ton talent au peuple.</a></li>
+                <li><a href="#">Octroie ton trésor au peuple.</a></li>
+                <li><a href="#">Défends ton goût contre peuple.</a></li>
+                <li><a href="#">Défends ta langue contre peuple.</a></li>
+                <li><a href="#">Défends ta tristesse contre peuple.</a></li>
+                <li><a href="#">Engage-toi en croyant le peuple.</a></li>
+               <li><a href="#"> Engage-toi dans la vérité  en peuple.</a></li>
+               <li><a href="#">Engage-toi à enseigner le peuple.</a></li>
+                <li><a href="#">Donc, ta vie sera le succès.</a></li>
+                <li><a href="#">Donc, ton voyage de vie sera sauf.</a></li>
+                <li><a href="#">Donc, ta vie sera satisfaite.</a></li>
+            </ul>
+        </div>
+    </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+
+    <script>
+ $(document).ready(function () {
+            
+            var $li = $('.cir_menu li');
+            var degValue = 360 / $li.length;
+
+            $.each($li, function (index, value) {
+                
+                var deg = Math.round(degValue * index),
+                    $this = $(this);
+                $this.css('transform', 'rotate(' + deg + 'deg)');
+                
+                if (deg > 90 && deg < 270) {
+                    $this.find('a').css('transform', 'rotate(' + 180 + 'deg)');
+                }
+                $this.delay(35 * index).animate({ 'opacity': 1 }, 1000);
+            });
+        });
+</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+﻿
+<!Doctype html>
+<html lang="fr">
+<!-- 
+Afrique, Yohanna Joseph Waliya.
+The cube codes are from Paul Hayes' blog at 
+https://paulrhayes.com/experiments/cube-3d 
+-->
+<head>
+<meta charset="UTF-8">
+<style type="text/css" title="text/css">
+/*<![CDATA[*/
+<!--
+#conteneur{ 
+   width:position:relative; 
+   width:300px; 
+   height:300px; 
+   margin: 0px auto; 
+   -webkit-perspective:2800px; 
+   -webkit-perspective-origin:50% 50%; 
+   -moz-perspective:2800px; 
+   -moz-perspective-origin:50% 50%; 
+   -o-perspective:2800px; 
+   -o-perspective-origin:50% 50%; 
+  background-color: rgba(0,0,0,0);
+  color:white;
+}
+
+#credits {
+            position: fixed;
+            text-align: center;
+            font-size: 14px;
+            color:white;
+            right:10px;
+            top:10px;
+            line-height:16px;
+        }
+
+.face{ 
+   width:300px; 
+   height:300px; 
+   position:absolute; 
+   line-height:350px; 
+   text-align:center; 
+   font-size:60px; 
+   opacity:0.7; 
+   border:solid 1px black; 
+} 
+
+.cote1{ 
+   background-color:rgba(0,0,0,0); 
+   color:white;
+   z-index:10; 
+} 
+.cote2{ 
+   transform:translateZ(-150px) translateX(150px) rotateY(90deg); 
+   -webkit-transform:translateZ(-150px) translateX(150px) rotateY(90deg); 
+   -moz-transform:translateZ(-150px) translateX(150px) rotateY(90deg); 
+   -o-transform:translateZ(-150px) translateX(150px) rotateY(90deg); 
+   -ms-transform:translateZ(-150px) translateX(150px) rotateY(90deg); 
+} 
+.cote3{ 
+   transform:translateZ(-150px) translateX(-150px) rotateY(-90deg); 
+   -webkit-transform:translateZ(-150px) translateX(-150px) rotateY(-90deg); 
+   -moz-transform:translateZ(-150px) translateX(-150px) rotateY(-90deg); 
+   -o-transform:translateZ(-150px) translateX(-150px) rotateY(-90deg); 
+   -ms-transform:translateZ(-150px) translateX(-150px) rotateY(-90deg); 
+} 
+.cote4{ 
+   ransform:translateZ(-150px) translateY(150px) rotateX(-90deg); 
+   -webkit-transform:translateZ(-150px) translateY(150px) rotateX(-90deg); 
+   -moz-transform:translateZ(-150px) translateY(150px) rotateX(90deg); 
+   -o-transform:translateZ(-150px) translateY(150px) rotateX(-90deg); 
+   -ms-transform:translateZ(-150px) translateY(150px) rotateX(-90deg); 
+} 
+.cote5{ 
+   transform:translateZ(-150px) translateY(-150px) rotateX(90deg); 
+   -webkit-transform:translateZ(-150px) translateY(-150px) rotateX(90deg); 
+   -moz-transform:translateZ(-150px) translateY(-150px) rotateX(90deg); 
+   -o-transform:translateZ(-150px) translateY(-150px) rotateX(90deg); 
+   -ms-transform:translateZ(-150px) translateY(-150px) rotateX(90deg); 
+} 
+.cote6{ 
+   transform:translateZ(-300px); 
+   -webkit-transform:translateZ(-300px); 
+   -moz-transform:translateZ(-300px); 
+   -o-transform:translateZ(-300px); 
+   -ms-transform:translateZ(-300px); 
+}
+.parent{ 
+   position:relative; 
+   width:350px; 
+   height:350px; 
+  background-color:rgba(0,0,0,0);
+  color:white;
+   animation:AnimCube 10s linear infinite; 
+   transform-style: preserve-3d; 
+   -webkit-animation:AnimCube 10s linear infinite; 
+   -webkit-transform-style: preserve-3d; 
+   -moz-animation:AnimCube 10s linear infinite; 
+   -moz-transform-style: preserve-3d; 
+   -o-animation:AnimCube 10s linear infinite; 
+   -o-transform-style: preserve-3d; 
+   -ms-animation:AnimCube 10s linear infinite; 
+   -ms-transform-style: preserve-3d; 
+} 
+
+@keyframes AnimCube{ 
+   from {} 
+   to{ transform-origin: 50% 50%; transform: rotateZ(360deg) 
+   rotateY(360deg) rotateX(360deg); } 
+} 
+@-webkit-keyframes AnimCube{ 
+   from {} 
+   to{ -webkit-transform-origin: 50% 50%; -webkit-transform: rotateZ(360deg) 
+   rotateY(360deg) rotateX(360deg); } 
+} 
+@-moz-keyframes AnimCube{ 
+   from {} 
+   to{ -moz-transform-origin: 50% 50%; -moz-transform: rotateZ(360deg) 
+   rotateY(360deg) rotateX(360deg); } 
+} 
+@-o-keyframes AnimCube{ 
+   from {} 
+   to{ -o-transform-origin: 50% 50%; -o-transform: rotateZ(360deg) 
+   rotateY(360deg) rotateX(360deg); } 
+} 
+@-ms-keyframes AnimCube{ 
+   from {} 
+   to{ -ms-transform-origin: 50% 50%; -ms-transform: rotateZ(360deg) 
+   rotateY(360deg) rotateX(360deg); } 
+}
+.cube {
+  position: relative;
+  top: 200px;
+  background-color: rgba(0,0,0,0);
+  color:white;
+}
+
+.rightFace,
+.leftFace,
+.topFace div {
+  padding: 10px;
+  width: 180px;
+  height: 180px;
+}
+
+.rightFace,
+.leftFace,
+.topFace {
+  position: absolute;
+}
+.leftFace {
+  -webkit-transform: skewY(30deg);
+  -moz-transform: skewY(30deg);
+  background-color: rgba(0,0,0,0);
+ color:white;
+}
+
+.rightFace {
+  -webkit-transform: skewY(-30deg);
+  -moz-transform: skewY(-30deg);
+  background-color: rgba(0,0,0,0);
+ Color:white;
+  left: 200px;
+}
+.topFace div {
+  -webkit-transform: skewY(-30deg) scaleY(1.16);
+  -moz-transform: skewY(-30deg) scaleY(1.16);
+  background-color: #0000;
+ Color:white:
+  font-size: 0.862em;
+}
+
+.topFace {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  top: -160px;
+  left: 100px;
+}
+.cube {
+  position: relative;
+  top: 200px;
+}
+
+.rightFace,
+.leftFace,
+.topFace div {
+  padding: 8px;
+  width: 180px;
+  height: 180px;
+  background-color: rgba(0,0,0,0);
+  color:white;
+}
+
+.rightFace,
+.leftFace,
+.topFace {
+  position: absolute;
+}
+
+.leftFace {
+  -webkit-transform: skewY(30deg);
+  -moz-transform: skewY(30deg);
+  background-color: rgba(0,0,0,0);
+  color:white;
+}
+
+.rightFace {
+  -webkit-transform: skewY(-30deg);
+  -moz-transform: skewY(-30deg);
+    background-color: rgba(0,0,0,0);
+  color:white;
+  left: 200px;
+}
+
+.topFace div {
+  -webkit-transform: skewY(-30deg) scaleY(1.16);
+  -moz-transform: skewY(-30deg) scaleY(1.16);
+  background-color: rgba(0,0,0,0);
+  color:white;
+  font-size: 0.862em;
+}
+
+.topFace {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  top: -158px;
+  left: 100px;
+  background-color: rgba(0,0,0,0);
+  color: white;
+}
+.conteneur {
+  width:300px; 
+  float:left; 
+  height: 150px;
+  margin: 50px
+}
+
+.cube {
+  width:300px; 
+  height: 150px; 
+  float:right; 
+  margin: 50px
+  background-color: rgba(0,0,0,0);
+  color:white;
+}
+
+center
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0,0,0,0);
+  color:white;
+  border-radius: 1px;
+}
+h2{  
+background-color: rgba(0,0,0,0);
+  color:white;
+}
+h4{  
+background-color: rgba(0,0,0,0);
+  color:white;
+}
+footer{  background-color: rgba(0,0,0,0);
+  color:white;
+}
+-->
+/*]]>*/
+</style>
+<title>Afrique, Yohanna Joseph Waliya</title>
+</head>
+<body style="background-color:black">
+<div id="credits">Yohanna Joseph Waliya<br>Nigeria, 2019</div>
+<h2 align="center">Cyberpoésies d'engagement</h2>
+
+ <div id="conteneur"> 
+
+<h3>Ifrikiya lève-toi!</h3>
+   <div class="parent"> 
+      <div class="face cote6">Ifrikiya</div>
+      <div class="face cote5">Lève-toi</div>
+      <div class="face cote4">De</div>
+      <div class="face cote3">Ta</div>
+      <div class="face cote2">Misère!</div>
+      <div class="face cote1">¡Ahora!</div>
+   </div> 
+<div class= "center">
+<div class="cube">
+  <div class="topFace">
+    <div>
+    <p> <strong>Lettre aux Nations Unies </strong></p>
+<marquee behavior="scroll" direction="left" scrollamount="12" id="mymarquee">
+	Walker Bush tua des Irakiens.</br> 
+	Homme d'État tua des Ivoiriens.</br> 
+	On appréhenda Laurent. </br>
+	On justifia Bush. </br>
+   </marquee></br>
+    </div>
+  </div>
+  <div class="leftFace">
+ <marquee behavior="scroll" direction="left" scrollamount="12" id="mymarquee1">
+	Pourquoi on laissa Bush ? </br>
+	Mais on attrapa Laurent ! </br>
+	On appréhenda  Charles Taylor.</br>
+	On justifia Tony Blair. </br>
+
+	</marquee></br>
+  </div>
+  <div class="rightFace">
+<marquee behavior="scroll" direction="left" scrollamount="12" id="mymarquee2">
+    Je ne supporte jamais les injustices ! </br>
+	Mais qui ne tua pas la pauvre masse ? </br>
+	Qui ne meurtrit jamais la pauvre masse ? </br>
+	On doit punir tous les sorts d’injustices. </br>
+ 	</marquee></br>
+  </div>
+  </div>
+</div>
+</div>
+  <div>
+<footer>
+<input type="button" value="Vers 1" onClick="document.getElementById('mymarquee').setAttribute('scrollamount', 1, 0);"><br />
+<input type="button" value="Vers 2" onClick="document.getElementById('mymarquee1').setAttribute('scrollamount', 1, 0);"><br />
+<input type="button" value="Vers 3" onClick="document.getElementById('mymarquee2').setAttribute('scrollamount', 1, 0);"><br />
+</footer>
+</div>
+ </body>
+</html>
