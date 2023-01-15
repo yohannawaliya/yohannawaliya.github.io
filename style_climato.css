@@ -1,0 +1,479 @@
+
+    
+       
+     /*Most of the codes here are copied from codepen.oi especially Cassidy Williams, pen: (https://codepen.io/cassidoo/pen/mgQpbe).  
+     I don't code but I know how to manipulate simple languages such as JavaScript,
+      HTML and CSS to get my philosophy inputed into e-Lit by applying what I call Manipulating Codes Composition Method (MCCM).
+      This version of Climatophosis is revised for the Climates of Change Exhibition 2020. The link to the original publication still remains http://www.thenewriver.us/climatophosis/
+      */
+html,body{    
+    margin:0;
+	padding:0;
+	background:url(climat.gif) no-repeat center center fixed #228b22; 
+   background-size:cover; 
+	width:100%;
+	height:100%;
+}
+
+div {
+display: flex;
+flex-direction: row-reverse;
+}
+$items-line: 1;
+$space: 30px;
+
+.container {
+position: absolute;
+top: 60%;
+left: 40%;
+-webkit-transform: translate(-60%, -60%);
+      transform: translate(-60%, -60%);
+width: 300px;
+height: 300px;
+}
+.circle1 {
+Justify-content:center
+display:flex;
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+width: 90%;
+height: 90%;
+border: 0px solid #000;
+border-radius: 50%;
+-webkit-animation: 59s move-left infinite;
+      animation: 59s move-left infinite;
+}
+
+.circle2 {
+Justify-content:center;
+display:flex;
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+width: 90%;
+height: 90%;
+border: 0px solid #000;
+border-radius: 50%;
+-webkit-animation: 58s move-right infinite;
+      animation: 58s move-right infinite;
+}
+.circle3 {
+Justify-content: center;
+display:flex;
+position: absolute;
+top: 30%;
+left: 30%;
+-webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+width: 90%;
+height: 90%;
+border: 0px solid #000;
+border-radius: 50%;
+-webkit-animation: 50s move-left infinite;
+      animation: 50s move-left infinite;
+}
+
+.circle4 {
+Justify-content:center;
+display:flex;
+position: absolute;
+top: 30%;
+left: 30%;
+-webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+width: 90%;
+height: 90%;
+border: 0px solid #000;
+border-radius: 50%;
+-webkit-animation: 50s move-left infinite;
+      animation: 50s move-left infinite;
+}
+.circle5 {
+Justify-content:center;
+display:flex;
+position: absolute;
+top: 35%;
+left: 35%;
+-webkit-transform: translate(-60%, -40%);
+      transform: translate(-60%, -40%);
+width: 100%;
+height: 100%;
+border: 1px solid #000;
+border-radius: 60%;
+-webkit-animation: 40s move-left infinite;
+      animation: 60s move-left infinite;
+}
+.circle6 {
+Justify-content: center;
+display:flex;
+position: absolute;
+top: 35%;
+left: 35%;
+-webkit-transform: translate(-60%, -40%);
+      transform: translate(-60%, -40%);
+width: 95%;
+height: 95%;
+border: 0px solid #000;
+border-radius: 50%;
+-webkit-animation: 60s move-left infinite;
+      animation: 40s move-left infinite;
+}
+
+
+
+@-webkit-keyframes move-left {
+0% {
+width: 90%;
+height: 90%;
+top: 20%;
+border: 0px solid #000;
+}
+10% {
+width: 98%;
+height: 98%;
+}
+15% {
+width: 85%;
+height: 85%;
+top: 52%;
+left: 50%;
+border: 0px solid #000;
+}
+22% {
+border: 0px solid #000;
+}
+50% {
+left: 80%;
+top: 50%;
+}
+95% {
+border: 0px solid #000;
+top: 70%;
+}
+100% {
+width: 90%;
+height: 90%;
+left: 50%;
+border: 0px solid #000;
+}
+}
+
+@keyframes move-left {
+0% {
+width: 90%;
+height: 90%;
+top: 20%;
+border: 0px solid #000;
+}
+10% {
+width: 98%;
+height: 98%;
+}
+15% {
+width: 85%;
+height: 85%;
+top: 52%;
+left: 50%;
+border: 0px solid #000;
+}
+22% {
+border: 0px solid #000;
+}
+50% {
+left: 80%;
+top: 50%;
+}
+95% {
+border: 0px solid #000;
+top: 60%;
+}
+100% {
+width: 90%;
+height: 90%;
+left: 50%;
+border: 0px solid #000;
+}
+}
+@-webkit-keyframes move-right {
+0% {
+width: 90%;
+height: 90%;
+top: 20%;
+border: 0px solid #eee;
+}
+10% {
+width: 98%;
+height: 98%;
+}
+15% {
+width: 85%;
+height: 85%;
+top: 52%;
+left: 50%;
+border: 0px solid #000;
+}
+22% {right:50%;
+border: 0px solid #000;
+}
+50% {
+left: 20%;
+top: 50%;
+}
+95% {
+border: 0px solid#000;
+top: 60%;
+}
+100% {
+width: 90%;
+height: 90%;
+left: 50%;
+border: 0px solid #000;
+}
+}
+@keyframes move-right {
+0% {
+width: 90%;
+height: 90%;
+top: 20%;
+border: 0px solid #000;
+}
+10% {
+width: 100%;
+height: 100%;
+}
+15% {
+width: 85%;
+height: 85%;
+top: 52%;
+left: 50%;
+
+}
+22% {right:50%;
+
+}
+50% {
+left: 20%;
+top: 50%;
+}
+95% {
+
+top: 70%;
+}
+100% {
+width: 90%;  
+height: 90%;
+left: 50%;
+border: 0px solid #000;
+}
+}
+span1{
+
+font-size: 1.5rem;
+position: absolute;
+space:1px;
+z-index: -1;
+top: 2px;
+left: -2px;
+transition: left 8s;  
+display: flex;
+}
+span2{ 
+font-size: 1.5em;
+position: relative;
+space:1px;
+z-index: -1;
+top: 2px;
+left: -2px;
+transition: left 8s;
+display: flex;
+position: relative;
+}
+span3{
+font-size: 1.5em;
+position: absolute;
+space:1px;
+z-index: -3;
+top: 4px;
+left:2px;
+transition: left 10s;  
+display: flex;
+}
+span4{ 
+font-size: 1.5em;
+space:1px;
+z-index: -3;
+top: 4px;
+left: 2px;
+transition: left 10s;
+display: flex;
+position: relative;
+}
+span5{ 
+font-size: 1.6em;
+space:1.2px;
+z-index: -4
+top: 5px;
+left: 3px;
+transition: right 10s;
+display: flex;
+position: relative;
+}
+span6{
+font-size: 1.5em;
+position: absolute;
+space:1px;
+z-index: -3;
+top: 4px;
+left:2px;
+transition: left 10s;  
+display: flex;
+}
+
+h4{ color:floralwhite;
+text-align: left;}
+h3{color:floralwhite;
+text-align:center;
+}
+
+circle1,div:hover {
+-webkit-animation-play-state:paused;
+cursor: pointer;
+}
+circle2,div:hover {
+-webkit-animation-play-state:paused;
+cursor: pointer;
+}
+circle3,div:hover {
+-webkit-animation-play-state:paused;
+cursor: pointer;
+}
+
+circle4,div:hover {
+-webkit-animation-play-state:paused;
+cursor: pointer;
+}
+circle5,div:hover {
+-webkit-animation-play-state:paused;
+cursor: pointer;
+}
+circle6,div:hover {
+-webkit-animation-play-state:paused;
+cursor: pointer;
+}
+
+ .sun {
+     position: absolute;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     margin: auto;
+     width:70px;
+     height:70px;
+     border-radius:50%;
+     background:white;
+     opacity:1;
+     box-shadow: 0px 0px 40px 15px white;
+ }
+ 
+ .ray_box {
+     position: absolute;
+     margin: auto;
+     top:0px;
+     left:0;
+     right:0;
+     bottom:0;
+     width:70px;
+     -webkit-animation: ray_anim 120s linear infinite;
+     animation: ray_anim 120s linear infinite;
+ }
+ .ray {
+     background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+     background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+     margin-left:10px;
+     border-radius:80% 80% 0 0;
+     position:absolute;
+     opacity:0.1;
+ }
+ 
+ .ray1 {
+     height:170px;
+     width:30px;
+     -webkit-transform: rotate(180deg);
+     top:-175px;
+     left: 15px;
+ }
+ .ray2 {
+     height:100px;
+     width:8px;
+     -webkit-transform: rotate(220deg);
+     top:-90px;
+     left: 75px;
+ }
+ .ray3 {
+     height:170px;
+     width:50px;
+     -webkit-transform: rotate(250deg);
+     top:-80px;
+     left: 100px;
+ }
+ .ray4 {
+     height:120px;
+     width:14px;
+     -webkit-transform: rotate(305deg);
+     top:30px;
+     left: 100px;
+ }
+ .ray5 {
+     height:140px;
+     width:30px;
+     -webkit-transform: rotate(-15deg);
+     top:60px;
+     left: 40px;
+ }
+ .ray6 {
+     height:90px;
+     width:50px;
+     -webkit-transform: rotate(30deg);
+     top:60px;
+     left: -40px;
+ }
+ .ray7 {
+     height:180px;
+     width:10px;
+     -webkit-transform: rotate(70deg);
+     top:-35px;
+     left: -40px;
+ }
+ .ray8 {
+     height:120px;
+     width:30px;
+     -webkit-transform: rotate(100deg);
+     top:-45px;
+     left:-90px;
+ }
+ .ray9 {
+     height:80px;
+     width:10px;
+     -webkit-transform: rotate(120deg);
+     top:-65px;
+     left:-60px;
+ }
+ .ray10 {
+     height:190px;
+     width:23px;
+     -webkit-transform: rotate(150deg);
+     top:-185px;
+     left: -60px;
+ }
+ 
+ 
+ @-webkit-keyframes ray_anim {
+     0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+     100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+ }
