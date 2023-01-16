@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+body {
+  overflow: hidden;
+  font-family: "Lato";
+  height: 100vh;
+  background: linear-gradient(180deg, #1100ff 0%, #21a7cb 70%, #4e8a1e 70.1%, #152d01 100%);
+  margin: 0%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  width: 19.8em;
+  height: 14em;
+  margin: 10em auto;
+  border-radius: 50%;
+  background: transparent;
+  list-style: none;
+  transition: transform 450ms;
+}
+
+.wrapper > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  padding: 0.5em;
+  border: 0em;
+  background: #12a969;
+  text-align: center;
+  transform: rotate(0), skew(45deg, 0deg);
+  transform-origin: 100% 100%;
+  cursor: pointer;
+  transition: padding 250ms, background 200ms;
+}
+.wrapper > li:hover {
+  padding: 1.5em;
+  background: #13B26F;
+}
+.wrapper > li > span {
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 85%;
+  color: bisque;
+  font-weight: 900;
+  transform: skew(-45deg, 0deg);
+}
+
+.wrapper > li:nth-child(1) {
+  transform: rotate(0deg) skew(45deg, 0deg);
+}
+
+.rotated-1 {
+  transform: rotate(0deg);
+}
+
+.wrapper > li:nth-child(2) {
+  transform: rotate(45deg) skew(45deg, 0deg);
+}
+
+.rotated-2 {
+  transform: rotate(-45deg);
+}
+
+.wrapper > li:nth-child(3) {
+  transform: rotate(90deg) skew(45deg, 0deg);
+}
+
+.rotated-3 {
+  transform: rotate(-90deg);
+}
+
+.wrapper > li:nth-child(4) {
+  transform: rotate(135deg) skew(45deg, 0deg);
+}
+
+.rotated-4 {
+  transform: rotate(-135deg);
+}
+
+.wrapper > li:nth-child(5) {
+  transform: rotate(180deg) skew(45deg, 0deg);
+}
+
+.rotated-5 {
+  transform: rotate(-180deg);
+}
+
+.wrapper > li:nth-child(6) {
+  transform: rotate(225deg) skew(45deg, 0deg);
+}
+
+.rotated-6 {
+  transform: rotate(-225deg);
+}
+
+.wrapper > li:nth-child(7) {
+  transform: rotate(270deg) skew(45deg, 0deg);
+}
+
+.rotated-7 {
+  transform: rotate(-270deg);
+}
+
+.wrapper > li:nth-child(8) {
+  transform: rotate(315deg) skew(45deg, 0deg);
+}
+
+.rotated-8 {
+  transform: rotate(-315deg);
+}
