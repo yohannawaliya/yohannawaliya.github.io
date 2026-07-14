@@ -1,0 +1,16 @@
+doc_id,subject,sub_type,verb,verb_type,object,obj_type,year,place,quantity,intensity
+NYT_1919_03,workers,labor,went on strike,collective_action,factories,target,1919,Pittsburgh,5000,high
+NYT_1919_03,police,state,arrested,repression,organizers,person,1919,Pittsburgh,12,high
+NYT_1919_04,workers,labor,demanded,demand,wage_increases,demand,1919,Chicago,,medium
+NYT_1919_04,factory_owners,capital,refused,refusal,demands,document,1919,Chicago,,high
+NYT_1920_01,union,labor,negotiated,negotiation,management,actor,1920,New York,,low
+NYT_1920_01,management,capital,dismissed,dismissal,200 workers,person,1920,New York,200,high
+NYT_1920_05,workers,labor,marched,collective_action,downtown,location,1920,Seattle,3000,medium
+NYT_1920_05,strikers,labor,clashed with,confrontation,police forces,actor,1920,Seattle,,high
+NYT_1920_05,police,state,dispersed,repression,crowd,person,1920,Seattle,,medium
+NYT_1921_06,workers,labor,petitioned,petition,parliament,institution,1921,Washington,,low
+NYT_1921_06,government,state,intervened,intervention,dispute,event,1921,Washington,,medium
+NYT_1921_07,union_leaders,labor,called off,de-escalation,general_strike,event,1921,Detroit,,medium
+NYT_1922_02,factory_owners,capital,conceded,concession,8h_workday,policy,1922,Cleveland,,medium
+NYT_1922_02,workers,labor,celebrated,celebration,victory,event,1922,Cleveland,,high
+NYT_1922_03,workers,labor,formed,organization,workers_council,org,1922,Boston,,low
