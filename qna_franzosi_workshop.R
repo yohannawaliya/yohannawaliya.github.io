@@ -1,4 +1,3 @@
-install.packages("igraph")
 # ============================================================================
 # QUANTITATIVE NARRATIVE ANALYSIS -- FRANZOSI SAO METHOD
 # Full workshop script. Run top to bottom, or source() individual sections.
@@ -6,14 +5,14 @@ install.packages("igraph")
 # ============================================================================
 
 # ---- 0. SETUP --------------------------------------------------------------
- #install.packages(c("tidyverse","igraph","ggraph","scales"))
+# install.packages(c("tidyverse","igraph","ggraph","scales"))
 library(tidyverse)
 library(igraph)
 library(ggraph)
 
 # ---- 1. LOAD DATA -----------------------------------------------------------
 # Option A: load the provided corpus
-sao <- read_csv("/Users/yohannajosephwaliya/Downloads/QNA-Franzosi-Workshop-Kit 2/labour_corpus_1919_1922.csv", show_col_types = FALSE)
+sao <- read_csv("labour_corpus_1919_1922.csv", show_col_types = FALSE)
 
 # Option B: hand-code your own clauses directly (uncomment to use instead)
 # sao <- tribble(
@@ -85,7 +84,8 @@ p_net <- ggraph(g, layout = "stress") +
     label_size = 2.8, strength = 0.25
   ) +
   geom_node_point(size = 9, colour = "#1a2744", alpha = 0.85) +
-  geom_node_text(aes(label = name), repel = TRUE, size = 3.4, fontface = "bold") +
+  geom_node_text(aes(label = name), repel = TRUE, size = 3.4, fontface = "bold",
+                 colour = "#1B7A3D") +
   theme_graph() +
   labs(title = "SAO Actor Network", colour = "Action Type")
 print(p_net)
